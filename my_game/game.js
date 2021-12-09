@@ -47,20 +47,10 @@ class playGame extends Phaser.Scene{
         // this.cameras.main.startFollow(this.player);
 
         this.enemy=this.physics.add.sprite(800,80,'enemy')
-        // this.stars = this.physics.add.group({
-        //     key: 'star',
-        //     repeat: 3,
-        //     setXY: { x: Phaser.Math.Between((width/3)+130,(2*(width)/3)-130), stepY: 40 }
-        // });
-        this.star=this.physics.add.sprite(800,300,'star')
+        
+        this.star=this.physics.add.sprite(800,350,'star')
         this.star.setScale(2);
         
-        
-        // stars.children.iterate(function (child) {
-        
-        //     child.physics.add.sprite(800,300,'star');
-        
-        // });
 
         scoreText = this.add.text(500, 30, 'score: 0', { fontSize: '32px', fill: '#000' });
         
@@ -68,9 +58,9 @@ class playGame extends Phaser.Scene{
         // Various collide functions
         this.player.setCollideWorldBounds(true);
 
-        // this.physics.add.collider(this.player, this.road);
+        this.physics.add.collider(this.player, this.road);
         this.physics.add.collider(this.enemy, this.road);
-        this.physics.add.collider(this.player, this.enemy);
+        this.physics.add.collider(this.player, this.enemy,this.overgame,null,this);
         this.physics.add.overlap(this.enemy, this.star);
         this.physics.add.overlap(this.player, this.star,this.pickstar,null,this);
         
@@ -81,6 +71,10 @@ class playGame extends Phaser.Scene{
     }
 
     update(){
+        if (gameOver)
+        {
+        return;
+         }
         // Call the cursor function
         this.createCursor();
         // this.road.tilePositionY=this.myCam.scrollY*.3;
@@ -97,10 +91,6 @@ class playGame extends Phaser.Scene{
         // Initializing the cursor keys
         this.cursors = this.input.keyboard.createCursorKeys();
 
-        if (gameOver)
-        {
-        return;
-         }
 
         // If left arrow key is pressed
         if (this.cursors.left.isDown) {
@@ -134,7 +124,7 @@ class playGame extends Phaser.Scene{
     // Function to move the enemy
     moveEnemy(enemy){
         // Increases y coordinate of enemy by 5
-        enemy.y += 13;
+        enemy.y += 15;
 
         // After crossing the screen it spawns back at a random x coordinate
         if (enemy.y > width){
@@ -165,20 +155,17 @@ class playGame extends Phaser.Scene{
  pickstar(player,star){
 
     star.disableBody(true,true);
-    // star.destroy();
+
     score += 10;
     scoreText.setText('Score: ' + score);
  
     star.enableBody(true,50,50,true,true);
     this.movestar(star);
-    this.resetStarPos(star);    // if (star.countActive(true) === 0)
-    // {
-
-    //         star.enableBody(true, 50, 50, true, true);
-
-    //     };
-
-
+    this.resetStarPos(star);   
+ }
+ overgame(){
+     gameOver =true;
+     scoreText = this.add.text(730, 400, 'Game over', { fontSize: '84px', fill: '#fff' });
  }
 
 }
