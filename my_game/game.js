@@ -20,7 +20,7 @@ window.onload = function() {
 var width = window.innerWidth*window.devicePixelRatio;
 var height = window.innerHeight*window.devicePixelRatio;
 var score = 0;
-var gameOver = false;
+var gameOver = true;
 var scoreText;
 
 class playGame extends Phaser.Scene{
@@ -40,7 +40,8 @@ class playGame extends Phaser.Scene{
 
     create(){
         // Spawn the road, player and enemy
-        this.road = this.add.tileSprite(width/2, height/2,0,0, 'road');
+        this.road = this.add.tileSprite(width/2, (height/2)-100,0,0, 'road');
+        this.road.setScale(2);
         // this.road.setOrigin(0,0);
         // this.road.setScrollFactor(2);
         this.player = this.physics.add.sprite(width/2, 9*height/10, 'player');
@@ -52,7 +53,7 @@ class playGame extends Phaser.Scene{
         this.star.setScale(2);
         
 
-        scoreText = this.add.text(500, 30, 'score: 0', { fontSize: '32px', fill: '#000' });
+        scoreText = this.add.text(500, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
         
        
         // Various collide functions
@@ -71,14 +72,22 @@ class playGame extends Phaser.Scene{
     }
 
     update(){
+        
+        this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
+                gameOver = false;
+        }
+
         if (gameOver)
         {
         return;
          }
+         
         // Call the cursor function
         this.createCursor();
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // This make the road move
+        
         this.road.tilePositionY -= 20;
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // Call the function to move the enemy
@@ -145,11 +154,11 @@ class playGame extends Phaser.Scene{
     // Function to spwan back at random x coordinate
     resetEnemyPos(enemy){
         enemy.y = 0;
-        enemy.x = Phaser.Math.Between((width/3)+130,(2*(width)/3)-130)
+        enemy.x = Phaser.Math.Between((width/3),(2*(width)/3))
     }
     resetStarPos(star){
         star.y = 0;
-        star.x = Phaser.Math.Between((width/3)+130,(2*(width)/3)-130)
+        star.x = Phaser.Math.Between((width/3),(2*(width)/3))
     }
 
  pickstar(player,star){
@@ -163,9 +172,20 @@ class playGame extends Phaser.Scene{
     this.movestar(star);
     this.resetStarPos(star);   
  }
- overgame(){
+ overgame(player,enemy){
      gameOver =true;
      scoreText = this.add.text(730, 400, 'Game over', { fontSize: '84px', fill: '#fff' });
+     scoreText = this.add.text(780,500, 'Your Score: 0', { fontSize: '44px', fill: '#fff' });
+     scoreText.setText('Your Score: ' + score);
+     this.time.addEvent({
+        delay: 50,
+        callback: ()=>{
+            enemy.destroy();
+            player.destroy();
+        },
+        loop: true
+    }) 
+    
  }
 
 }
