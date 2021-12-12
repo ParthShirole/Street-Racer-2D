@@ -1,7 +1,7 @@
 window.onload = function() {
     let gameConfig = {
         type: Phaser.AUTO,
-        backgroundColor: 0x444444,
+        backgroundColor: 0x32CD32,
         scale: {
             mode: Phaser.Scale.FIT,
             autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -16,65 +16,206 @@ window.onload = function() {
     }
     game = new Phaser.Game(gameConfig);
 }
-
+// Defined globally 
+var width = window.innerWidth*window.devicePixelRatio;
+var height = window.innerHeight*window.devicePixelRatio;
+var score = 0;
+var gameOver = true;
+var scoreText;
+var loop;
+var musicConfig ={
+    mute: false,
+    volume: 0.5,
+    rate: 1,
+    detune: 0,
+    seek: 0,
+    loop: false,
+    delay: 0
+};
 class playGame extends Phaser.Scene{
     constructor(){
         super("PlayGame");
     }
 
     preload(){
-    this.load.image('road', 'assets/road.png');
-    this.load.image('player', 'assets/player.png');
-    this.load.image('enemy', 'assets/enemycar.png');
+        // Load all the images
+        this.load.image('road', 'assets/road_test.png');
+        this.load.image('player', 'assets/player.png');
+        this.load.image('enemy', 'assets/enemycar.png');
+        this.load.spritesheet('star', 'assets/star.png',{frameWidth:22,frameHeight:22});
+        this.load.audio("sound_game", 'assets/sound.mp3');
+   
+        
     }
 
     create(){
-    this.road=this.add.tileSprite(this.game.scale.width/2, this.game.scale.height/2,0,0, 'road');
-    // this.add.image(this.game.scale.width/2, 9*this.game.scale.height/10, 'player');
-    this.player = this.physics.add.sprite(this.game.scale.width/2, 9*this.game.scale.height/10, 'player');
-    // this.physics.world.setBounds(0, 0, this.game.scale.width, this.game.scale.height);
-    this.enemy=this.physics.add.sprite(800,300,'enemy')
-    // this.enemy=this.add.tileSprite(800,300,0,0,'enemy')
-    this.player.setCollideWorldBounds(true);
-    this.enemy.setCollideWorldBounds(true);
-    
-    
-    this.cursors = this.input.keyboard.createCursorKeys();
-    this.physics.add.collider(this.player, this.road);
-    this.physics.add.collider(this.enemy, this.road);
-    this.physics.add.collider(this.player, this.enemy);
-    
-    // this.speed = 5;
+        // Spawn the road, player and enemy
+        this.road = this.add.tileSprite(width/2, (height/2),0,0, 'road');
+        this.road.scaleY = 1.5;
+        this.road.scaleX = 1.8;
+        // this.road.setOrigin(0,0);
+        // this.road.setScrollFactor(2);
+        this.player = this.physics.add.sprite(width/2, 9*height/10, 'player');
+        // this.cameras.main.startFollow(this.player);
+
+        this.enemy=this.physics.add.sprite(800,80,'enemy')
+        
+        this.star=this.physics.add.sprite(800,350,'star')
+        this.star.setScale(2.4);
+        
+
+        scoreText = this.add.text(100, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
+        this.music = this.sound.add('sound_game');
+        
+        
+       
+        // Various collide functions
+        this.player.setCollideWorldBounds(true);
+
+        this.physics.add.collider(this.player, this.road);
+        this.physics.add.collider(this.enemy, this.road);
+        this.physics.add.collider(this.player, this.enemy,this.overgame,null,this);
+        this.physics.add.overlap(this.enemy, this.star);
+        this.physics.add.overlap(this.player, this.star,this.pickstar,null,this);
+        
+        
+
+        // this.createCursor();
     
     }
 
     update(){
-    if (this.cursors.left.isDown) {
-        this.player.setVelocityX(-500);
-        }
+        
+        this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
+            // if(loop){
+            //     this.scene.restart();
+            // }
+            // else{
+                gameOver = false;
+                this.music.play(musicConfig);
+            }
+        // }
+        
+            
+            if (gameOver)
+            {
+            // scoreText = this.add.text(530, 430, 'Press SPACE to START', { fontSize: '72px', fill: '#fff' });
+            // loop =true;
+            return;
+            }
+          
+        // if (gameOver)
+        // {
+        // return;
+        //  }
+         
+        // Call the cursor function
+        this.createCursor();
+        // this.road.tilePositionY=this.myCam.scrollY*.3;
+        // This make the road move
+        
+        this.road.tilePositionY -= 10;
+        // this.road.tilePositionY=this.myCam.scrollY*.3;
+        // Call the function to move the enemy
+        this.moveEnemy(this.enemy);
+        this.movestar(this.star);
 
-    else if (this.cursors.right.isDown) {
-        this.player.setVelocityX(500);
-        }
-
-    else{
-        this.player.setVelocityX(0);
     }
 
-    if (this.cursors.up.isDown) {
-        this.player.setVelocityY(-500);
+    createCursor(){
+        // Initializing the cursor keys
+        this.cursors = this.input.keyboard.createCursorKeys();
+
+
+        // If left arrow key is pressed
+        if (this.cursors.left.isDown) {
+            this.player.setVelocityX(-300);
+            }
+        
+        // If right arrow is pressed
+        else if (this.cursors.right.isDown) {
+            this.player.setVelocityX(300);
+            }
+        
+        else{
+            this.player.setVelocityX(0);
         }
-    else if (this.cursors.down.isDown) {
-        this.player.setVelocityY(500);
+
+        // If up arrow key is pressed
+        if (this.cursors.up.isDown) {
+            this.player.setVelocityY(-300);
+            }
+        
+        // If down arrow key is presses
+        else if (this.cursors.down.isDown) {
+            this.player.setVelocityY(300);
+            }
+        
+        else {
+            this.player.setVelocityY(0);
         }
+    }
+
+    // Function to move the enemy
+    moveEnemy(enemy){
+        // Increases y coordinate of enemy by 5
+        enemy.y += 18;
+
+        // After crossing the screen it spawns back at a random x coordinate
+        if (enemy.y > width){
+            this.resetEnemyPos(enemy);
+        }
+    }
+
+    movestar(star){
+        // Increases y coordinate of enemy by 5
+        star.y += 10;
+
+        // After crossing the screen it spawns back at a random x coordinate
+        if (star.y > width){
+            this.resetStarPos(star);
+        }
+    }
+
+    // Function to spwan back at random x coordinate
+    resetEnemyPos(enemy){
+        enemy.y = 0;
+        enemy.x = Phaser.Math.Between((width/3)+120,(2*(width)/3)-120)
+    }
+    resetStarPos(star){
+        star.y = 0;
+        star.x = Phaser.Math.Between((width/3)+120,(2*(width)/3)-120)
+    }
+
+ pickstar(player,star){
+
+    star.disableBody(true,true);
+
+    score += 10;
+    scoreText.setText('Score: ' + score);
+ 
+    star.enableBody(true,50,50,true,true);
+    this.movestar(star);
+    this.resetStarPos(star);   
+ }
+ overgame(player,enemy){
+     
+     gameOver =true;
+     scoreText = this.add.text(580, 270, 'Game over', { fontSize: '134px', fill: '#fff' });
+     scoreText = this.add.text(730,430, 'Your Score: 0', { fontSize: '54px', fill: '#fff' });
+     scoreText.setText('Your Score: ' + score);
+     this.time.addEvent({
+        delay: 50,
+        callback: ()=>{
+            enemy.destroy();
+            player.destroy();
+        },
+        loop: true
+    }) 
     
-    else{
-        this.player.setVelocityY(0);
-    }
-    // this.enemy.tilePositionY -= 5;
-    this.road.tilePositionY -= 10;
+ }
 
-    }
 }
 
 
