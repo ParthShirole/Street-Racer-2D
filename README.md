@@ -48,6 +48,8 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
   The commands for installation are :<br/>
  pip install cv2<br/>
                                     pip install mediapipe<br/>
+ pip install cvzone 1.4.1 <br/>
+ pip install pynput<br/>
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on . 
  
 ## 🏅 Team Members
