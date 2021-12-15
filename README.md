@@ -6,6 +6,8 @@
 
 • Implementing stearing control using hand gestures with help of OpenCv library of Python
 
+• Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone and play the game.
+
 
 ## 👨‍💻 Tech-Stack
 
@@ -19,18 +21,57 @@
 </p>
 
  
-  
-  
-  ## Demo of the game
+## 🛠️ Prerequisites 
+  ### <b>Gesture control</b>
+  Following Libraries must be installed. 
+  The commands for installation are :<br/>
+ ```
+ pip install numpy
+ ```
+ ```
+ pip install opencv-python
+ ```
+ ```
+ pip install mediapipe
+ ```
+ ```
+ pip install cvzone==1.4.1 
+ ```
+ ```
+ pip install pynput
+ ```
+  In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on. 
+<br/>
+### <b>Play Game</b>
+Run the index.html file via livesever to play the game<br>
+Press ```Spacebar``` to Start the game<br/> 
 
+## 📈Progress
+
+### Game
+- [x] Control the game using arrow keys
+- [x] Add stars and enable scoring mechanism
+- [x] Avoid enemy cars
+- [x] Enable GameOver on Collision
+- [x] Add maps and audio
+- [ ] Change control to awsd keys
+- [ ] Run game in Loop
+### Gesture Control
+- [x] map awsd keys of keyboard to screen
+- [x] enable control using awsd keys using gestures
+- [x] Align keys in proper orientation 
+- [ ] Link it with the game
+- [ ] Enable transparency of awsd keys
+
+
+  
+## 🎮 Demo of the game
 
 
 https://user-images.githubusercontent.com/81592570/146214263-dfd22969-75af-4e91-a78e-102664125066.mp4
 
 
-
-
-## Controlling the game using hand detection 
+## 👋 Controlling the game using hand detection 
   
   
   
@@ -43,14 +84,9 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
   
   ![hand_landmarks](https://user-images.githubusercontent.com/81592570/146204032-e8524d4c-97db-461f-9d6e-6018c3275de2.png)
 
-  ### Prerequisites to run the opencv code
-  Mediapipe and Opencv Must be installed 
-  The commands for installation are :<br/>
- pip install cv2<br/>
-                                    pip install mediapipe<br/>
- pip install cvzone==1.4.1 <br/>
- pip install pynput<br/>
-  In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on . 
+  
+
+
  
 ## 🏅 Team Members
 
@@ -59,7 +95,7 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
 - [Rishabh Bali](https://github.com/Ris-Bali) - rishabhsbali@gmail.com
 - [Kunal Agarwal](https://github.com/KunalA18) - kunalagarwal1072002@gmail.com 
 
-## Mentors 
+## 😎 Mentors 
 - [Kush Kothari](https://github.com/kkothari2001) 
 - [Reshmika Nambiar](https://github.com/Reshmika-Nambiar)
   
