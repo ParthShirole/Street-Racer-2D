@@ -18,13 +18,6 @@
 <image src="assets_Readme/opencv.png" width=28 title="opencv">
 </p>
 
-
-## 🏅 Team Members
-
-- Parth Shirole
-- Aryaman Shardul
-- Rishabh Bali
-- Kunal Agarwal
  
   
   
@@ -56,9 +49,16 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
  pip install cv2<br/>
                                     pip install mediapipe<br/>
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on . 
+ 
+## 🏅 Team Members
 
-  ## Mentors 
- Kush Kothari </br>
- Reshmika Nambiar
+- [Parth Shirole](https://github.com/ParthShirole) - parthshirole06@gmail.com
+- [Aryaman Shardul](https://github.com/Aryaman22102002) - aryashardul2002@gmail.com
+- [Rishabh Bali](https://github.com/Ris-Bali) - rishabhsbali@gmail.com
+- [Kunal Agarwal](https://github.com/KunalA18) - kunalagarwal1072002@gmail.com 
+
+## Mentors 
+- [Kush Kothari](https://github.com/kkothari2001) 
+- [Reshmika Nambiar](https://github.com/Reshmika-Nambiar)
   
   
