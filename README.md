@@ -43,7 +43,7 @@
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on. 
 <br/>
 ### <b>Play Game</b>
-Run the index.html file via livesever to play the game<br>
+Run the index.html file via liveserver to play the game<br>
 Press ```Spacebar``` to Start the game<br/> 
 
 ## 📈Progress
