@@ -12,12 +12,12 @@
 ## 👨‍💻 Tech-Stack
 
 <p>
-<image src="assets_Readme/html-1.svg" width=30 title="Html">
-<image src="assets_Readme/css-3.svg" width=30 title="CSS">
-<image src="assets_Readme/javascript-1.svg" width=30 title="Javascript">
-<image src="assets_Readme/phaser.png" width=42 title="Phaser">
-<image src="assets_Readme/python-5.svg" width=35 title="python">
-<image src="assets_Readme/opencv.png" width=28 title="opencv">
+<image src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" width=30 title="Html">
+<image src="https://github.com/get-icon/geticon/blob/master/icons/css-3.svg" width=30 title="CSS">
+<image src="https://github.com/get-icon/geticon/blob/master/icons/javascript.svg" width=30 title="Javascript">
+<image src="https://github.com/get-icon/geticon/raw/master/icons/python.svg" width=35 title="python">
+<image src="https://phaser.io/images/github/300/sample1.png" width=35 title="python">
+<image src="https://github.com/get-icon/geticon/blob/master/icons/opencv.svg" width=28 title="opencv">
 </p>
 
  
