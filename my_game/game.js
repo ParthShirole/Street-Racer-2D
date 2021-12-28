@@ -23,6 +23,7 @@ var score = 0;
 var gameOver = true;
 var scoreText;
 var loop;
+
 var musicConfig ={
     mute: false,
     volume: 0.5,
@@ -53,10 +54,9 @@ class playGame extends Phaser.Scene{
         this.road = this.add.tileSprite(width/2, (height/2),0,0, 'road');
         this.road.scaleY = 1.5;
         this.road.scaleX = 1.8;
-        // this.road.setOrigin(0,0);
-        // this.road.setScrollFactor(2);
+       
         this.player = this.physics.add.sprite(width/2, 9*height/10, 'player');
-        // this.cameras.main.startFollow(this.player);
+       
 
         this.enemy=this.physics.add.sprite(800,80,'enemy')
         
@@ -85,17 +85,19 @@ class playGame extends Phaser.Scene{
     }
 
     update(){
-        
+        // scoreText = this.add.text(220, 580, 'Press SPACE to START', { fontSize: '36px', fill: '#fff' });
         this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        this.enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
-            // if(loop){
-            //     this.scene.restart();
-            // }
-            // else{
                 gameOver = false;
-                this.music.play(musicConfig);
+                this.music.play(musicConfig);  
+                    
             }
-        // }
+            if(Phaser.Input.Keyboard.JustDown(this.enter)){
+                this.music.stop(musicConfig);
+                this.scene.restart();       
+                }
+        
         
             
             if (gameOver)
@@ -205,6 +207,7 @@ class playGame extends Phaser.Scene{
      scoreText = this.add.text(580, 270, 'Game over', { fontSize: '134px', fill: '#fff' });
      scoreText = this.add.text(730,430, 'Your Score: 0', { fontSize: '54px', fill: '#fff' });
      scoreText.setText('Your Score: ' + score);
+     scoreText = this.add.text(430, 530, 'Press ENTER to Play Again', { fontSize: '72px', fill: '#fff' });
      this.time.addEvent({
         delay: 50,
         callback: ()=>{
@@ -214,8 +217,12 @@ class playGame extends Phaser.Scene{
         loop: true
     }) 
     
+        
+   
  }
 
 }
+
+
 
 
