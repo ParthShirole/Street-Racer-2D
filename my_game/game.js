@@ -22,6 +22,7 @@ var height = window.innerHeight*window.devicePixelRatio;
 var score = 0;
 var gameOver = true;
 var scoreText;
+var startText;
 var loop;
 
 var musicConfig ={
@@ -63,7 +64,7 @@ class playGame extends Phaser.Scene{
         this.star=this.physics.add.sprite(800,350,'star')
         this.star.setScale(2.4);
         
-
+        startText = this.add.text(220, 580, 'Press SPACE to START', { fontSize: '36px', fill: '#fff' });
         scoreText = this.add.text(100, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
         this.music = this.sound.add('sound_game');
         
@@ -85,11 +86,12 @@ class playGame extends Phaser.Scene{
     }
 
     update(){
-        // scoreText = this.add.text(220, 580, 'Press SPACE to START', { fontSize: '36px', fill: '#fff' });
+        
         this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
                 gameOver = false;
+                startText.destroy();
                 this.music.play(musicConfig);  
                     
             }
