@@ -55,7 +55,7 @@ Press ```Spacebar``` to Start the game<br/>
 - [x] Enable GameOver on Collision
 - [x] Add maps and audio
 - [ ] Change control to awsd keys
-- [ ] Run game in Loop
+- [x] Run game in Loop
 ### Gesture Control
 - [x] map awsd keys of keyboard to screen
 - [x] enable control using awsd keys using gestures
