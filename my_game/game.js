@@ -65,7 +65,7 @@ class playGame extends Phaser.Scene{
         this.star.setScale(2.4);
         
         startText = this.add.text(220, 580, 'Press SPACE to START', { fontSize: '36px', fill: '#fff' });
-        scoreText = this.add.text(100, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
+        scoreText = this.add.text(1650, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
         this.music = this.sound.add('sound_game');
         
         
@@ -129,7 +129,11 @@ class playGame extends Phaser.Scene{
 
     createCursor(){
         // Initializing the cursor keys
-        this.cursors = this.input.keyboard.createCursorKeys();
+        this.cursors = this.input.keyboard.addKeys(
+            {up:Phaser.Input.Keyboard.KeyCodes.W,
+            down:Phaser.Input.Keyboard.KeyCodes.S,
+            left:Phaser.Input.Keyboard.KeyCodes.A,
+            right:Phaser.Input.Keyboard.KeyCodes.D});
 
 
         // If left arrow key is pressed
