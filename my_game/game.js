@@ -66,7 +66,7 @@ class playGame extends Phaser.Scene{
         this.star.setScale(2.4);
         
         startText = this.add.text(220, 580, 'Press SPACE to START', { fontSize: '36px', fill: '#fff' });
-        scoreText = this.add.text(100, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
+        scoreText = this.add.text(1650, 30, 'score: 0', { fontSize: '42px', fill: '#fff' });
         this.music = this.sound.add('sound_game');
         
         
