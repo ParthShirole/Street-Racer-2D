@@ -24,6 +24,7 @@ var gameOver = true;
 var scoreText;
 var startText;
 var loop;
+var firstPlay = true;
 
 var musicConfig ={
     mute: false,
@@ -89,25 +90,30 @@ class playGame extends Phaser.Scene{
         
         this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
-        if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
+
+        if(firstPlay){
+            if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
                 gameOver = false;
                 startText.destroy();
                 this.music.play(musicConfig);  
-                    
+                firstPlay = false;
             }
+        }  
+        else{
             if(Phaser.Input.Keyboard.JustDown(this.enter)){
-                this.music.stop(musicConfig);
-                this.scene.restart();       
-                }
-        
-        
-            
-            if (gameOver)
-            {
-            // scoreText = this.add.text(530, 430, 'Press SPACE to START', { fontSize: '72px', fill: '#fff' });
-            // loop =true;
-            return;
+                
+                gameOver = false;
+                startText.destroy();
+                this.music.play(musicConfig); 
+                score = 0;
             }
+        }
+         
+        if (gameOver){
+        // scoreText = this.add.text(530, 430, 'Press SPACE to START', { fontSize: '72px', fill: '#fff' });
+        // loop =true;
+        return;
+        }
           
         // if (gameOver)
         // {
@@ -119,7 +125,7 @@ class playGame extends Phaser.Scene{
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // This make the road move
         
-        this.road.tilePositionY -= 10;
+        this.road.tilePositionY -= 7;
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // Call the function to move the enemy
         this.moveEnemy(this.enemy);
@@ -167,8 +173,8 @@ class playGame extends Phaser.Scene{
 
     // Function to move the enemy
     moveEnemy(enemy){
-        // Increases y coordinate of enemy by 5
-        enemy.y += 18;
+        // Increases y coordinate of enemy by 13
+        enemy.y += 13;
 
         // After crossing the screen it spawns back at a random x coordinate
         if (enemy.y > width){
@@ -177,7 +183,7 @@ class playGame extends Phaser.Scene{
     }
 
     movestar(star){
-        // Increases y coordinate of enemy by 5
+        // Increases y coordinate of enemy by 10
         star.y += 10;
 
         // After crossing the screen it spawns back at a random x coordinate
