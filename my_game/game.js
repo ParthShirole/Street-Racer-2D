@@ -91,23 +91,17 @@ class playGame extends Phaser.Scene{
         this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
 
-        if(firstPlay){
-            if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
-                gameOver = false;
-                startText.destroy();
-                this.music.play(musicConfig);  
-                firstPlay = false;
-            }
-        }  
-        else{
-            if(Phaser.Input.Keyboard.JustDown(this.enter)){
+        if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
+            gameOver = false;
+            startText.destroy();
+            this.music.play(musicConfig);  
                 
-                gameOver = false;
-                startText.destroy();
-                this.music.play(musicConfig); 
-                score = 0;
-            }
         }
+        if(Phaser.Input.Keyboard.JustDown(this.enter)){
+            this.music.stop(musicConfig);
+            score = 0;
+            this.scene.restart();       
+            }
          
         if (gameOver){
         // scoreText = this.add.text(530, 430, 'Press SPACE to START', { fontSize: '72px', fill: '#fff' });
