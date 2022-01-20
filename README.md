@@ -14,15 +14,15 @@
 - [📁 File Structure](#-file-structure)
 - [👨‍💻 Tech-Stack](#-tech-stack)
 - [🛠️ Prerequisites](#️-prerequisites)
-  - [<b>Gesture control</b>](#bgesture-controlb)
-  - [<b>Jupyter Notebook</b>](#bjupyter-notebookb)
-  - [<b>Game</b>](#bgameb)
+  - [Gesture control](#gesture-control)
+  - [Jupyter Notebook](#jupyter-notebook)
+  - [Game](#game)
 - [🎲 Starting the game](#-starting-the-game)
 - [👋 Game Controls](#-game-controls)
 - [📈 Future Prospects](#-future-prospects)
 - [🎮 Demo](#-demo)
-  - [<b>Demo of the game using keyboard</b>](#bdemo-of-the-game-using-keyboardb)
-  - [<b>Demo of the game using hand detection</b>](#bdemo-of-the-game-using-hand-detectionb)
+  - [Demo of the game using keyboard](#demo-of-the-game-using-keyboard)
+  - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
 - [🏅 Team Members](#-team-members)
 - [😎 Mentors](#-mentors)
 - [License](#license)
@@ -69,7 +69,7 @@
 
  
 ## 🛠️ Prerequisites 
-  ### <b>Gesture control</b>
+  ### Gesture control
   Following Libraries must be installed. 
   The commands for installation are :<br/>
  ```
@@ -90,10 +90,10 @@
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on. 
 <br/>
  
- ### <b>Jupyter Notebook</b>
+ ### Jupyter Notebook
  If you are using the Gesture_Controls.ipynb file, you will have to use Jupyter Notebook. You can install Jupyter Notebook from their [website](https://jupyter.org/install).
  
- ### <b>Game</b>
+ ### Game
  Requires Vscode with ``Live Server`` extension installed.
  
 ## 🎲 Starting the game
@@ -125,13 +125,13 @@
 
   
 ## 🎮 Demo
-  ### <b>Demo of the game using keyboard</b>
+  ### Demo of the game using keyboard<
 
 
 https://user-images.githubusercontent.com/81592570/146214263-dfd22969-75af-4e91-a78e-102664125066.mp4
 
 
- ### <b>Demo of the game using hand detection</b>
+ ### Demo of the game using hand detection
   
 
 
