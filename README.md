@@ -34,7 +34,7 @@
 
 • Implementing stearing control using hand gestures with help of OpenCv library of Python
 
-• Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone and play the game.
+• Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone to play the game.
 
 ## 📁 File Structure
 ```
