@@ -14,9 +14,9 @@
 - [📁File Structure](#file-structure)
 - [👨‍💻 Tech-Stack](#-tech-stack)
 - [🛠️ Prerequisites](#️-prerequisites)
-  - [<b>Gesture control</b>](#bgesture-controlb)
-  - [<b>Play Game</b>](#bplay-gameb)
-- [📈Future Prospects](#future-prospects)
+  - [<b>Gesture control</b>](#gesture-control)
+  - [<b>Play Game</b>](#play-game)
+- [📈 Future Prospects](#future-prospects)
 - [🎮 Demo of the game](#-demo-of-the-game)
 - [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
 - [🏅 Team Members](#-team-members)
@@ -32,7 +32,7 @@
 
 • Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone and play the game.
 
-## 📁File Structure
+## 📁 File Structure
 ```
 ┣ 📂my_game
  ┃ ┣ 📂assets
@@ -89,7 +89,7 @@
 Run the index.html file via liveserver to play the game<br>
 Press ```Spacebar``` to Start the game<br/> 
 
-## 📈Future Prospects
+## 📈 Future Prospects
 
 - [ ] Use Flask to import gesture control code
 - [ ] Implement socket connection between client and server
