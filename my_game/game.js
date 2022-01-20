@@ -97,6 +97,7 @@ class playGame extends Phaser.Scene{
             }
             if(Phaser.Input.Keyboard.JustDown(this.enter)){
                 this.music.stop(musicConfig);
+                score=0;
                 this.scene.restart();       
                 }
         
@@ -119,7 +120,7 @@ class playGame extends Phaser.Scene{
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // This make the road move
         
-        this.road.tilePositionY -= 10;
+        this.road.tilePositionY -= 9;
         // this.road.tilePositionY=this.myCam.scrollY*.3;
         // Call the function to move the enemy
         this.moveEnemy(this.enemy);
@@ -139,11 +140,13 @@ class playGame extends Phaser.Scene{
         // If left arrow key is pressed
         if (this.cursors.left.isDown) {
             this.player.setVelocityX(-300);
+            console.log('left');
             }
         
         // If right arrow is pressed
         else if (this.cursors.right.isDown) {
             this.player.setVelocityX(300);
+            console.log('right');
             }
         
         else{
@@ -163,12 +166,12 @@ class playGame extends Phaser.Scene{
         else {
             this.player.setVelocityY(0);
         }
-    }
+    }   
 
     // Function to move the enemy
     moveEnemy(enemy){
         // Increases y coordinate of enemy by 5
-        enemy.y += 18;
+        enemy.y += 15;
 
         // After crossing the screen it spawns back at a random x coordinate
         if (enemy.y > width){
