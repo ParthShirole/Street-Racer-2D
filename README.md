@@ -1,6 +1,6 @@
 
 <p>
-<h1 align = "center" > <strong>STREET RACER 2D </strong> <br>
+<h1 align = "center" > <strong>🌉STREET RACER 2D🌉 </strong> <br>
 <h3 align = "center">Team :- bhagwanBharose
 <h3 align = "center">Project name :- Gamers Paradise
  <hr>
@@ -21,7 +21,7 @@
 - [👋 Game Controls](#-game-controls)
 - [📈 Future Prospects](#-future-prospects)
 - [🎮 Demo](#-demo)
-  - [Demo of the game using keyboard](#demo-of-the-game-using-keyboard)
+  - [Demo of the game using keyboard<](#demo-of-the-game-using-keyboard)
   - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
 - [🏅 Team Members](#-team-members)
 - [😎 Mentors](#-mentors)
