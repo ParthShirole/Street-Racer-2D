@@ -1,23 +1,27 @@
-# Gamers-Paradise
 
-<h1 align = "center" > STREET RACER 2D
+<p>
+<h1 align = "center" > <strong>STREET RACER 2D </strong> <br>
+<h3 align = "center">Team :- bhagwanBharose
+<h3 align = "center">Project name :- Gamers Paradise
+ <hr>
+</p>
+
 
 ## Table of Contents
 
-- [Gamers-Paradise](#gamers-paradise)
-  - [Table of Contents](#table-of-contents)
-  - [🗒️About](#️about)
-  - [📁File Structure](#file-structure)
-  - [👨‍💻 Tech-Stack](#-tech-stack)
-  - [🛠️ Prerequisites](#️-prerequisites)
-    - [<b>Gesture control</b>](#bgesture-controlb)
-    - [<b>Play Game</b>](#bplay-gameb)
-  - [📈Future Prospects](#future-prospects)
-  - [🎮 Demo of the game](#-demo-of-the-game)
-  - [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
-  - [🏅 Team Members](#-team-members)
-  - [😎 Mentors](#-mentors)
-  - [License](#license)
+- [Table of Contents](#table-of-contents)
+- [🗒️About](#️about)
+- [📁File Structure](#file-structure)
+- [👨‍💻 Tech-Stack](#-tech-stack)
+- [🛠️ Prerequisites](#️-prerequisites)
+  - [<b>Gesture control</b>](#bgesture-controlb)
+  - [<b>Play Game</b>](#bplay-gameb)
+- [📈Future Prospects](#future-prospects)
+- [🎮 Demo of the game](#-demo-of-the-game)
+- [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
+- [🏅 Team Members](#-team-members)
+- [😎 Mentors](#-mentors)
+- [License](#license)
 
 
 ## 🗒️About
