@@ -2,6 +2,7 @@
 <p>
 <h1 align = "center" > <strong>STREET RACER 2D </strong> <br>
 <h3 align = "center">Team :- bhagwanBharose
+<h3 align = "center">Project name :- Gamers Paradise
  <hr>
 </p>
 
@@ -10,16 +11,18 @@
 
 - [Table of Contents](#table-of-contents)
 - [🗒️About](#️about)
-- [📁File Structure](#file-structure)
+- [📁 File Structure](#-file-structure)
 - [👨‍💻 Tech-Stack](#-tech-stack)
 - [🛠️ Prerequisites](#️-prerequisites)
   - [<b>Gesture control</b>](#bgesture-controlb)
+  - [<b>Jupyter Notebook</b>](#bjupyter-notebookb)
   - [<b>Game</b>](#bgameb)
-- [🎲 How to Play](#-how-to-play)
-  - [Game controls](#game-controls)
-- [🎮 Demo of the game](#-demo-of-the-game)
-- [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
-- [📈Future Prospects](#future-prospects)
+- [🎲 Starting the game](#-starting-the-game)
+- [👋 Game Controls](#-game-controls)
+- [📈 Future Prospects](#-future-prospects)
+- [🎮 Demo](#-demo)
+  - [<b>Demo of the game using keyboard</b>](#bdemo-of-the-game-using-keyboardb)
+  - [<b>Demo of the game using hand detection</b>](#bdemo-of-the-game-using-hand-detectionb)
 - [🏅 Team Members](#-team-members)
 - [😎 Mentors](#-mentors)
 - [License](#license)
@@ -33,22 +36,22 @@
 
 • Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone and play the game.
 
-## 📁File Structure
+## 📁 File Structure
 ```
 ┣ 📂my_game
- ┃ ┣ 📂assets
+ ┃ ┣ 📂assets                    # All the images required for the game 
  ┃ ┃ ┣ 📜enemycar.png
  ┃ ┃ ┣ 📜phaser.png
  ┃ ┃ ┣ 📜player.png
  ┃ ┃ ┣ 📜road_test.png
  ┃ ┃ ┣ 📜sound.mp3
- ┃ ┃ ┗ 📜star.png
- ┃ ┣ 📜control.py
- ┃ ┣ 📜game.js
+ ┃ ┃ ┗ 📜star.png              
+ ┃ ┣ 📜game.js                  # All the images required for the game 
  ┃ ┣ 📜index.html
  ┃ ┣ 📜phaser.js
  ┃ ┗ 📜phaser.min.js
  ┣ 📜Gesture_Controls.ipynb
+ ┣ 📜Gesture_Controls.py
  ┣ 📜LICENSE
  ┗ 📜README.md
 ```
@@ -86,51 +89,66 @@
  ```
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on. 
 <br/>
-### <b>Game</b>
-Requires Vscode with ``Live Server`` extension installed
-
-## 🎲 How to Play
-
+ 
+ ### <b>Jupyter Notebook</b>
+ If you are using the Gesture_Controls.ipynb file, you will have to use Jupyter Notebook. You can install Jupyter Notebook from their [website](https://jupyter.org/install).
+ 
+ ### <b>Game</b>
+ Requires Vscode with ``Live Server`` extension installed.
+ 
+## 🎲 Starting the game
 1. Clone the repo using 
-  ``` 
+ ```
   git clone https://github.com/ParthShirole/Street-Racer-2D.git 
   ```
-2. Open ``` index.html ``` and ```Gesture_Controls.py```
+2. Open ``` index.html ```
 3. Run ```index.html``` using ``Go Live`` option of Vscode (enabled after downloading Live Server extension)
-4. Run ``Gesture_Controls.py`` and pin the Camera window on Top
+4. Now run ```Gesture_Controls.py``` or ```Gesture_Controls.ipynb``` and place the VideoCapture window on top of the game screen. 
+ 
 
-### Game controls
+## 👋 Game Controls
+ We have mapped the controls of the car to the "A" and "D" keys on the keyboard so by using these virtual keys we can control the car .
+  We are using Mediapipe hand detection model under hood for hand detection and the keyboard module for pressing the keys through our code.
+  
+  ![hand_landmarks](https://user-images.githubusercontent.com/81592570/146204032-e8524d4c-97db-461f-9d6e-6018c3275de2.png)
+ 
+ - For Left motion : 🤏 Join the index finger and the thumb (distance between them should be less than 30) <br>
+ - For Right motion : Keep the index finger and the thumb far away from each other (distance between them should be greater than or equal to 30)<br>
+ - Press SPACE to Start game<br>
+ - Press ENTER to Restart game
 
-- For Left motion : 🤏 Touch the index finger and thumb <br>
-- For Right motion : Keep the distance between index finger and thumb > 25<br>
-- Press SPACE to Start game<br>
-- Press Enter to Restart game
+## 📈 Future Prospects
+
+- [ ] Use Flask to import gesture control code
+- [ ] Implement socket connection between client and server
+- [ ] Add levels in Game
 
   
-## 🎮 Demo of the game
+## 🎮 Demo
+  ### <b>Demo of the game using keyboard</b>
 
 
 https://user-images.githubusercontent.com/81592570/146214263-dfd22969-75af-4e91-a78e-102664125066.mp4
 
 
-## 👋 Controlling the game using hand detection 
+ ### <b>Demo of the game using hand detection</b>
   
   
   
 
-https://user-images.githubusercontent.com/81592570/146202672-1971c43b-1c81-4498-a553-87b6c22c8a72.mp4
 
-We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by using these virtual keys we can control the car .
-  We are using Mediapipe hand detection model under hood for hand detection . 
+https://user-images.githubusercontent.com/82901720/150368301-25cd2c7d-ef16-4321-90e6-db02eb45b184.mp4
+
+
+
+
+We have mapped the controls of the car to the "A" and "D" keys on the keyboard so by using these virtual keys we can control the car .
+  We are using Mediapipe hand detection model under hood for hand detection and the keyboard module for pressing the keys through our code.
   
   
   ![hand_landmarks](https://user-images.githubusercontent.com/81592570/146204032-e8524d4c-97db-461f-9d6e-6018c3275de2.png)
 
-## 📈Future Prospects
-
-- [ ] Use Flask to import gesture control code
-- [ ] Implement socket connection between client and server
-- [ ] Add levels in Game 
+  
 
 
  
@@ -146,4 +164,4 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
 - [Reshmika Nambiar](https://github.com/Reshmika-Nambiar)
   
 ## License
-The [License](LICENSE) used in this project.  
+The [License](LICENSE) used in this project. 
