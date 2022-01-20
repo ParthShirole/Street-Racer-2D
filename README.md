@@ -1,5 +1,25 @@
 # Gamers-Paradise
 
+<h1 align = "center" > STREET RACER 2D
+
+## Table of Contents
+
+- [Gamers-Paradise](#gamers-paradise)
+  - [Table of Contents](#table-of-contents)
+  - [🗒️About](#️about)
+  - [📁File Structure](#file-structure)
+  - [👨‍💻 Tech-Stack](#-tech-stack)
+  - [🛠️ Prerequisites](#️-prerequisites)
+    - [<b>Gesture control</b>](#bgesture-controlb)
+    - [<b>Play Game</b>](#bplay-gameb)
+  - [📈Future Prospects](#future-prospects)
+  - [🎮 Demo of the game](#-demo-of-the-game)
+  - [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
+  - [🏅 Team Members](#-team-members)
+  - [😎 Mentors](#-mentors)
+  - [License](#license)
+
+
 ## 🗒️About
 
 • Making a Gesture-controlled 2D Car Racing game using phaser.js
@@ -8,6 +28,25 @@
 
 • Visit our [Github repo](https://github.com/ParthShirole/Gamers-Paradise) to clone and play the game.
 
+## 📁File Structure
+```
+┣ 📂my_game
+ ┃ ┣ 📂assets
+ ┃ ┃ ┣ 📜enemycar.png
+ ┃ ┃ ┣ 📜phaser.png
+ ┃ ┃ ┣ 📜player.png
+ ┃ ┃ ┣ 📜road_test.png
+ ┃ ┃ ┣ 📜sound.mp3
+ ┃ ┃ ┗ 📜star.png
+ ┃ ┣ 📜control.py
+ ┃ ┣ 📜game.js
+ ┃ ┣ 📜index.html
+ ┃ ┣ 📜phaser.js
+ ┃ ┗ 📜phaser.min.js
+ ┣ 📜Gesture_Controls.ipynb
+ ┣ 📜LICENSE
+ ┗ 📜README.md
+```
 
 ## 👨‍💻 Tech-Stack
 
@@ -46,23 +85,11 @@
 Run the index.html file via liveserver to play the game<br>
 Press ```Spacebar``` to Start the game<br/> 
 
-## 📈Progress
+## 📈Future Prospects
 
-### Game
-- [x] Control the game using arrow keys
-- [x] Add stars and enable scoring mechanism
-- [x] Avoid enemy cars
-- [x] Enable GameOver on Collision
-- [x] Add maps and audio
-- [ ] Change control to awsd keys
-- [x] Run game in Loop
-### Gesture Control
-- [x] map awsd keys of keyboard to screen
-- [x] enable control using awsd keys using gestures
-- [x] Align keys in proper orientation 
-- [ ] Link it with the game
-- [ ] Enable transparency of awsd keys
-
+- [ ] Use Flask to import gesture control code
+- [ ] Implement socket connection between client and server
+- [ ] Add levels in Game
 
   
 ## 🎮 Demo of the game
@@ -99,4 +126,5 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
 - [Kush Kothari](https://github.com/kkothari2001) 
 - [Reshmika Nambiar](https://github.com/Reshmika-Nambiar)
   
-  
+## License
+The [License](LICENSE) used in this project.  
