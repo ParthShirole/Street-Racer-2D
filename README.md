@@ -2,7 +2,6 @@
 <p>
 <h1 align = "center" > <strong>STREET RACER 2D </strong> <br>
 <h3 align = "center">Team :- bhagwanBharose
-<h3 align = "center">Project name :- Gamers Paradise
  <hr>
 </p>
 
@@ -15,10 +14,12 @@
 - [👨‍💻 Tech-Stack](#-tech-stack)
 - [🛠️ Prerequisites](#️-prerequisites)
   - [<b>Gesture control</b>](#bgesture-controlb)
-  - [<b>Play Game</b>](#bplay-gameb)
-- [📈Future Prospects](#future-prospects)
+  - [<b>Game</b>](#bgameb)
+- [🎲 How to Play](#-how-to-play)
+  - [Game controls](#game-controls)
 - [🎮 Demo of the game](#-demo-of-the-game)
 - [👋 Controlling the game using hand detection](#-controlling-the-game-using-hand-detection)
+- [📈Future Prospects](#future-prospects)
 - [🏅 Team Members](#-team-members)
 - [😎 Mentors](#-mentors)
 - [License](#license)
@@ -85,15 +86,25 @@
  ```
   In the code there is a part to capture the live stream Videocapture(n) here the index n is by default 0 for most machines but if the webcam doesn't work with 0 you can try 1,-1,0 and so on. 
 <br/>
-### <b>Play Game</b>
-Run the index.html file via liveserver to play the game<br>
-Press ```Spacebar``` to Start the game<br/> 
+### <b>Game</b>
+Requires Vscode with ``Live Server`` extension installed
 
-## 📈Future Prospects
+## 🎲 How to Play
 
-- [ ] Use Flask to import gesture control code
-- [ ] Implement socket connection between client and server
-- [ ] Add levels in Game
+1. Clone the repo using 
+  ``` 
+  git clone https://github.com/ParthShirole/Street-Racer-2D.git 
+  ```
+2. Open ``` index.html ``` and ```Gesture_Controls.py```
+3. Run ```index.html``` using ``Go Live`` option of Vscode (enabled after downloading Live Server extension)
+4. Run ``Gesture_Controls.py`` and pin the Camera window on Top
+
+### Game controls
+
+- For Left motion : 🤏 Touch the index finger and thumb <br>
+- For Right motion : Keep the distance between index finger and thumb > 25<br>
+- Press SPACE to Start game<br>
+- Press Enter to Restart game
 
   
 ## 🎮 Demo of the game
@@ -115,7 +126,11 @@ We have mapped the controls of the car to the W,A,S,D keys on the keyboard so by
   
   ![hand_landmarks](https://user-images.githubusercontent.com/81592570/146204032-e8524d4c-97db-461f-9d6e-6018c3275de2.png)
 
-  
+## 📈Future Prospects
+
+- [ ] Use Flask to import gesture control code
+- [ ] Implement socket connection between client and server
+- [ ] Add levels in Game 
 
 
  
