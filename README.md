@@ -133,23 +133,13 @@ https://user-images.githubusercontent.com/81592570/146214263-dfd22969-75af-4e91-
 
  ### <b>Demo of the game using hand detection</b>
   
-  
-  
+
+
 
 
 https://user-images.githubusercontent.com/82901720/150368301-25cd2c7d-ef16-4321-90e6-db02eb45b184.mp4
-
-
-
-
-We have mapped the controls of the car to the "A" and "D" keys on the keyboard so by using these virtual keys we can control the car .
-  We are using Mediapipe hand detection model under hood for hand detection and the keyboard module for pressing the keys through our code.
   
-  
-  ![hand_landmarks](https://user-images.githubusercontent.com/81592570/146204032-e8524d4c-97db-461f-9d6e-6018c3275de2.png)
-
-  
-
+ 
 
  
 ## 🏅 Team Members
