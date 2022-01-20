@@ -51,12 +51,12 @@
 ## 👨‍💻 Tech-Stack
 
 <p>
-<image src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" width=30 title="Html">
-<image src="https://github.com/get-icon/geticon/blob/master/icons/css-3.svg" width=30 title="CSS">
-<image src="https://github.com/get-icon/geticon/blob/master/icons/javascript.svg" width=30 title="Javascript">
-<image src="https://github.com/get-icon/geticon/raw/master/icons/python.svg" width=35 title="python">
-<image src="https://user-images.githubusercontent.com/83249996/146242645-c764b523-2fce-4f59-b2e9-b51a5a0fc028.jpg" width=35 title="phaser">
-<image src="https://github.com/get-icon/geticon/blob/master/icons/opencv.svg" width=28 title="opencv">
+<image src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" width=20 title="Html"> &nbsp; Html <br> 
+<image src="https://github.com/get-icon/geticon/blob/master/icons/css-3.svg" width=20 title="CSS"> &nbsp; CSS <br>
+<image src="https://github.com/get-icon/geticon/blob/master/icons/javascript.svg" width=20 title="Javascript"> &nbsp; Javascript <br>
+<image src="https://github.com/get-icon/geticon/raw/master/icons/python.svg" width=25 title="python"> &nbsp; Python <br>
+<image src="https://user-images.githubusercontent.com/83249996/146242645-c764b523-2fce-4f59-b2e9-b51a5a0fc028.jpg" width=25 title="phaser"> &nbsp; Phaser.js <br>
+<image src="https://github.com/get-icon/geticon/blob/master/icons/opencv.svg" width=18 title="opencv"> &nbsp; OpenCV
 </p>
 
  
