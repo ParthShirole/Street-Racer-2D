@@ -46,12 +46,12 @@
  ┃ ┃ ┣ 📜road_test.png
  ┃ ┃ ┣ 📜sound.mp3
  ┃ ┃ ┗ 📜star.png              
- ┃ ┣ 📜game.js                  # All the images required for the game 
- ┃ ┣ 📜index.html
+ ┃ ┣ 📜game.js                   # It is the main JavaScript file for the game
+ ┃ ┣ 📜index.html                # It imports the game.js file
  ┃ ┣ 📜phaser.js
  ┃ ┗ 📜phaser.min.js
- ┣ 📜Gesture_Controls.ipynb
- ┣ 📜Gesture_Controls.py
+ ┣ 📜Gesture_Controls.ipynb      # Gesture controls for the game in .ipynb format
+ ┣ 📜Gesture_Controls.py         # Gesture controls for the game in .py format
  ┣ 📜LICENSE
  ┗ 📜README.md
 ```
