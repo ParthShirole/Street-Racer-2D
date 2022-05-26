@@ -38,7 +38,7 @@ while True:
         elif l >= 30:
             keyboard.release("A")
             keyboard.press("D")
-            print("D")
+            print("D ")
         
 
 

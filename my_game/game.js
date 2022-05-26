@@ -71,6 +71,7 @@ class playGame extends Phaser.Scene{
         
        
         // Various collide functions
+        
         this.player.setCollideWorldBounds(true);
 
         this.physics.add.collider(this.player, this.road);
