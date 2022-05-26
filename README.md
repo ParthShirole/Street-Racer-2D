@@ -1,7 +1,7 @@
 
 <p>
 <h1 align = "center" > <strong>🌉STREET RACER 2D🌉 </strong> <br>
-<h3 align = "center">Team :- bhagwanBharose
+
 <h3 align = "center">Project name :- Gamers Paradise
  <hr>
 </p>
@@ -24,7 +24,6 @@
   - [Demo of the game using keyboard<](#demo-of-the-game-using-keyboard)
   - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
 - [🏅 Team Members](#-team-members)
-- [😎 Mentors](#-mentors)
 - [License](#license)
 
 
@@ -149,9 +148,6 @@ https://user-images.githubusercontent.com/82901720/150368301-25cd2c7d-ef16-4321-
 - [Rishabh Bali](https://github.com/Ris-Bali) - rishabhsbali@gmail.com
 - [Kunal Agarwal](https://github.com/KunalA18) - kunalagarwal1072002@gmail.com 
 
-## 😎 Mentors 
-- [Kush Kothari](https://github.com/kkothari2001) 
-- [Reshmika Nambiar](https://github.com/Reshmika-Nambiar)
   
 ## License
 The [License](LICENSE) used in this project. 
