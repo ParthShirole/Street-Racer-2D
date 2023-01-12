@@ -21,7 +21,7 @@
 - [👋 Game Controls](#-game-controls)
 - [📈 Future Prospects](#-future-prospects)
 - [🎮 Demo](#-demo)
-  - [Demo of the game using keyboard<](#demo-of-the-game-using-keyboard)
+  - [Demo of the game using keyboard\<](#demo-of-the-game-using-keyboard)
   - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
 - [🏅 Team Members](#-team-members)
 - [License](#license)
@@ -58,12 +58,12 @@
 ## 👨‍💻 Tech-Stack
 
 <p>
-<image src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" width=20 title="Html"> &nbsp; Html <br> 
-<image src="https://github.com/get-icon/geticon/blob/master/icons/css-3.svg" width=20 title="CSS"> &nbsp; CSS <br>
-<image src="https://github.com/get-icon/geticon/blob/master/icons/javascript.svg" width=20 title="Javascript"> &nbsp; Javascript <br>
-<image src="https://github.com/get-icon/geticon/raw/master/icons/python.svg" width=25 title="python"> &nbsp; Python <br>
+<image src="https://user-images.githubusercontent.com/82901720/212160651-9f4298c6-7cde-4438-bfbe-bfc1eb4c7fb9.svg" width=20 title="Html"> &nbsp; Html <br> 
+<image src="https://user-images.githubusercontent.com/82901720/212160649-857beadf-0328-453f-991b-b783a776ac0d.svg" width=20 title="CSS"> &nbsp; CSS <br>
+<image src="https://user-images.githubusercontent.com/82901720/212160654-c590dbbb-3c6f-4560-ac14-c06537e70f22.svg" width=20 title="Javascript"> &nbsp; Javascript <br>
+<image src="https://user-images.githubusercontent.com/82901720/212160658-6f195834-8872-4203-85ce-061a18272f86.svg" width=25 title="python"> &nbsp; Python <br>
 <image src="https://user-images.githubusercontent.com/83249996/146242645-c764b523-2fce-4f59-b2e9-b51a5a0fc028.jpg" width=25 title="phaser"> &nbsp; Phaser.js <br>
-<image src="https://github.com/get-icon/geticon/blob/master/icons/opencv.svg" width=18 title="opencv"> &nbsp; OpenCV
+<image src="https://user-images.githubusercontent.com/82901720/212160656-518ced0e-f73b-4433-80f8-4b213cf19e7d.svg" width=18 title="opencv"> &nbsp; OpenCV
 </p>
 
  
