@@ -101,8 +101,9 @@
   git clone https://github.com/ParthShirole/Street-Racer-2D.git 
   ```
 2. Open ``` index.html ```
-3. Run ```index.html``` using ``Go Live`` option of Vscode (enabled after downloading Live Server extension)
-4. Now run ```Gesture_Controls.py``` or ```Gesture_Controls.ipynb``` and place the VideoCapture window on top of the game screen. 
+3. Activate environment using ``. mypython/bin/activate`` 
+4. Run ```index.html``` using ``Go Live`` option of Vscode (enabled after downloading Live Server extension)
+5. Now run ```Gesture_Controls.py``` or ```Gesture_Controls.ipynb``` and place the VideoCapture window on top of the game screen. 
  
 
 ## 👋 Game Controls
